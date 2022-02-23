@@ -1,21 +1,19 @@
-create table employee ( empid number(10), empname varchar2(20), income number(10), expense number(10), savings number(10));
+create table customers(
+customer_id number(10),
+sale_date date,
+sale_amount number(10),
+salesperson varchar(10),
+store_state varchar(10),
+order_id varchar(10)
+);
 
-insert into employee values(1, 'james bond', 25000, 150, 650);
-
-insert into employee values(2, 'sherlock', 50000,900,950);
-
-insert into employee values(3, 'tim', 12000,1500,950);
-
-update employee set expense=3000 where income=25000;
-
-select * from employee;
-
-insert into employee values(4, 'james', 19000,1400,1950);
-
-delete from employee where income<20000;
-
-insert into employee values(4, 'james', 19000,1400,1950);
-
-update employee set savings=2000 where income>20000;
-
-select empid, empname, savings from employee where savings>=2000;
+insert into customers values(1001, date'2020-05-23', 1200, 'S1', 'KA', '1001');
+insert into customers values(1001, date'2020-05-22', 1200, 'S2', 'NULL', '1002');
+insert into customers values(1002, date'2020-05-23', 1200, 'S3', 'MH', '1003');
+insert into customers values(1003, date'2020-05-22', 1500, 'S4', 'DL', '1004');
+insert into customers(customer_id, sale_date, sale_amount, salesperson, order_id) 
+VALUES (1010, date'2022-02-16', 2000, 'S10', '1009');
+-- data control commands ie grant and revoke
+-- grant & revoke commands
+GRANT SELECT ON customers TO RA1911003010186;
+REVOKE SELECT ON customers FROM RA1911003010186;
