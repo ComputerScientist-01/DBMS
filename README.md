@@ -1,6 +1,6 @@
-<h2 align="center">Advanced Programming Practice</h2>
+<h2 align="center">Database Management Systems</h2>
 
-All of my labwork done as part of Advanced Programming Practice (18CSC207J) lab.
+All of my labwork done as part of Database Management Systems (18CSC303J) lab.
 
 | Week Number | Programming Paradigm |
 |:------------:|:--------------------:|
